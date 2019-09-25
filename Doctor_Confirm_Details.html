@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doctor_Confirm_Details</title>
+	<link rel="stylesheet" type="text/css" href="css/Doctor_Confirm_Details_style.css">
+</head>
+
+
+
+<body>
+
+
+  <header>
+        <script>
+
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
+
+      </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+            <div class="navbar">
+                    <!--
+                    <div class="logo">
+                    <img src="image/logo.jpg" height="120px" width="120px">
+                </div>-->
+                <nav class="fill">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-home"></i>&nbsp;HOME</a></li>
+                        <li><a href="#"><i class="fa fa-thumbs-o-up"></i>&nbsp;ABOUT</a></li>
+                  
+                      <li>                <div class="dropdown">
+                          <button onclick="myFunction()" class="dropbtn"><i class="fa fa-support"></i>Support</button>
+                          <div id="myDropdown" class="dropdown-content">
+                            <a href="#" ><i class="fa fa-phone-square"></i>&nbsp;7977571987</a>
+                            <a href="#"><i class="fa fa-instagram"></i>&nbsp;amay_naik</a>
+                            <a href="#"><i class="fa fa-twitter"></i>&nbsp;Amaynaik</a>
+                          </div>
+                         
+                        </div></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;SIGN-OUT</a></li>
+                     
+                    </ul>
+                  </nav>
+                </section>
+               
+            </div><br>
+
+    </header>
+
+<h1>Please confirm your details</h1>
+<div class="box"><br><br>
+
+	<div class="profile_image">
+		
+		<h1>Profile Image</h1>		
+
+	</div>
+	<br><br>
+<script LANGUAGE="JavaScript">
+
+
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+params = getParams();
+
+firstname = unescape(params["firstname"]);
+lastname = unescape(params["lastname"]);
+email= unescape(params["email"]);
+phno=unescape(params["phno"]);
+bday=unescape(params["bday"]);
+bmonth=unescape(params["bmonth"]);
+byear=unescape(params["byear"]);
+gender=unescape(params["gender"]);
+age = unescape(params["age"]);
+blood_group=unescape(params["blood_group"]);
+
+medicalschool=unescape(params["medicalschool"]);
+internships=unescape(params["internships"]);
+speciality=unescape(params["speciality"]);
+certification_title1=unescape(params["certification_title1"]);
+c1day=unescape(params["c1day"]);
+c1month=unescape(params["c1month"]);
+c1year=unescape(params["c1year"]);
+certification_title2=unescape(params["certification_title2"]);
+c2day=unescape(params["c2day"]);
+c2month=unescape(params["c2month"]);
+c2year=unescape(params["c2year"]);
+exp=unescape(params["exp"]);
+
+residental_address=unescape(params["residental_address"]);
+residental_state=unescape(params["residental_state"]);
+residental_city=unescape(params["residental_city"]);
+residental_zipcode=unescape(params["residental_zipcode"]);
+
+clinic_address=unescape(params["clinic_address"]);
+clinic_state=unescape(params["clinic_state"]);
+clinic_city=unescape(params["clinic_city"]);
+clinic_zipcode=unescape(params["clinic_zipcode"]);
+
+
+var firstname = firstname.replace(/[+]/g," "); 
+var lastname=lastname.replace(/[+]/g," ");
+document.write('<p id="jstext1"> Welcome Dr. ' + firstname+  lastname+'</p>')
+
+var email=email;
+document.write('<p id="jstext"> Email:- ' +email+'</p>')
+
+var phno=phno.replace("+"," ");
+document.write('<p id="jstext"> Phno:-' +phno+'</p>')
+
+var bday=bday.replace(/[+]/g," ");
+var bmonth=bmonth.replace(/[+]/g," ");
+var byear=byear.replace(/[+]/g," ");
+document.write('<p id="jstext"> Birth Date:- ' +bday+ "/" +bmonth+ "/" +byear+ '</p>')
+
+var gender=gender.replace(/[+]/g," ");
+document.write('<p id="jstext"> Gender:- ' +gender+'</p>')
+
+var age=age.replace(/[+]/g," ");
+document.write('<p id="jstext"> Age:-  ' +age+'</p>')
+
+var blood_group=blood_group;
+document.write('<p id="jstext"> Blood Group:-  ' +blood_group+'</p>')
+
+var medicalschool=medicalschool.replace(/[+]/g," ");
+document.write('<p id="jstext"> Medical School:-  ' +medicalschool+'</p>')
+
+var internships=internships.replace(/[+]/g," ");
+document.write('<p id="jstext"> Internships:- ' +internships+'</p>')
+
+var speciality=speciality.replace(/[+]/g," ");
+document.write('<p id="jstext"> Speciality:- ' +speciality+'</p>')
+
+var certification_title1=certification_title1.replace(/[+]/g," ");
+document.write('<p id="jstext">  Certification_title1:-' +certification_title1+'</p>')
+
+var c1day=c1day.replace(/[+]/g," ");
+var c1month=c1month.replace(/[+]/g," ");
+var c1year=c1year.replace(/[+]/g," ");
+document.write('<p id="jstext">Exprire Date:-' +c1day+ "/" +c1month+ "/" +c1year+ '</p>')
+
+
+var certification_title2=certification_title2.replace(/[+]/g," ");
+document.write('<p id="jstext">  Certification_title2:-' +certification_title2+'</p>')
+
+var c2day=c2day.replace(/[+]/g," ");
+var c2month=c2month.replace(/[+]/g," ");
+var c2year=c2year.replace(/[+]/g," ");
+document.write('<p id="jstext">Exprire Date:- ' +c2day+ "/" +c2month+ "/" +c2year+ '</p>')
+
+var exp=exp.replace(/[+]/g," ");
+document.write('<p id="jstext"> Years of experiences:-  ' +exp+'</p>')
+
+var residental_address=residental_address.replace(/[+]/g," ");
+document.write('<p id="jstext"> Residental_address:- ' +residental_address+'</p>')
+
+var residental_state=residental_state.replace(/[+]/g," ");
+document.write('<p id="jstext"> Residental_state:- ' +residental_state+'</p>')
+
+var residental_city=residental_city.replace(/[+]/g," ");
+document.write('<p id="jstext">  Residental_city:- ' +residental_city+'</p>')
+
+var residental_zipcode=residental_zipcode.replace(/[+]/g," ");
+document.write('<p id="jstext">  Residental_zipcode:- ' +residental_zipcode+'</p>')
+
+var clinic_address=clinic_address.replace(/[+]/g," ");
+document.write('<p id="jstext">   Clinic_address:-' +clinic_address+'</p>')
+
+var clinic_state=clinic_state.replace(/[+]/g," ");
+document.write('<p id="jstext"> Clinic_state:- ' +clinic_state+'</p>')
+
+var clinic_city=clinic_city.replace(/[+]/g," ");
+document.write('<p id="jstext">  Clinic_city:- ' +clinic_city+'</p>')
+
+var clinic_zipcode=clinic_zipcode.replace(/[+]/g," ");
+document.write('<p id="jstext">  Clinic_zipcode:- ' +clinic_zipcode+'</p>')
+
+</script>
+</div>
+<br>
+
+	<input type="checkbox" name="Agree" required="required">
+				<span><a href="#">I agree that all my details mention above  are correct</a></span>
+				<br><br><br>
+
+	<button class="submit">
+		<a href="Doctor_ID_Generation.html">Submit</a>
+		</button>
+
+		<button class="return">
+			<a href="Doctor_Registration.html">Return</a>
+		</button>
+		<br><br>
+
+</body>
+</html>

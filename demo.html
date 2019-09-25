@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medic Hub</title>
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        <div class="navbar">
+                <!--
+                <div class="logo">
+                <img src="image/logo.jpg" height="120px" width="120px">
+            </div>-->
+            <nav class="fill">
+                <ul>
+                    <li><a href="#"><i class="fa fa-home"></i>&nbsp;HOME</a></li>
+                    <li><a href="#"><i class="fa fa-thumbs-o-up"></i>&nbsp;ABOUT</a></li>
+              
+                  <li>                <div class="dropdown">
+                      <button onclick="myFunction()" class="dropbtn"><i class="fa fa-support"></i>Support</button>
+                      <div id="myDropdown" class="dropdown-content">
+                        <a href="#" ><i class="fa fa-phone-square"></i>&nbsp;7977571987</a>
+                        <a href="#"><i class="fa fa-instagram"></i>&nbsp;amay_naik</a>
+                        <a href="#"><i class="fa fa-twitter"></i>&nbsp;Amaynaik</a>
+                      </div>
+                     
+                    </div></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;SIGN-OUT</a></li>
+                 
+                </ul>
+              </nav>
+            </section>
+            <section style="background: #34495e; color: rgba(255, 255, 255, 0.5);">
+        </div><br>
+
+              <div class="bg-img">
+                    <div class="container">
+                      <div class="fill">
+                      <div class="topnav">
+                          <a href="#" class="active"><i class="fa fa-home"></i> &nbsp; Home</a>
+                            <a href="doctor_searchpatient.html"><i class="fa fa-search"></i> &nbsp; Search Patient</a>
+                            <a href="doctor_patientemail.html"><i class="fa fa-envelope"></i> &nbsp;Patient Email</a>
+                            <a href="doctor_addpatient.html"><i class="fa fa-plus"></i>  &nbsp;Add Patient</a>
+                            <a href="doctor_updatepatient.html"><i class="fa fa-pencil"></i> &nbsp; Update Patient</a>
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <br>
+            <div class ="row">
+                <div class ="column">
+<div class="container1">
+    <div class="card">
+      <div class="front">
+        <div class="logo"><span></span></div>
+      </div>
+      <div class="back">
+        <h1>Helen Parker<span>design <i>&</i> photography</span></h1>
+        <ul>
+          <li>+1-111-111-11-11</li>
+          <li>my-email@email.com</li>
+          <li>my-site.com</li>
+          </ul>
+      </div>
+      </div>
+    </div>
+</div>
+    <div class ="column">
+    <div class="container1">
+        <div class="card">
+          <div class="front">
+            <div class="logo"><span></span></div>
+            <div class ="extra"><i class="fa fa-home"></i></div> 
+          </div>
+          <div class="back">
+            <h1>Helen Parker<span>design <i>&</i> photography</span></h1>
+            <ul>
+              <li>+1-111-111-11-11</li>
+              <li>my-email@email.com</li>
+              <li>my-site.com</li>
+              </ul>
+          </div>
+        </div>
+          </div>
+        </div>
+        <div class="column">
+        <div class="container1">
+            <div class="card">
+              <div class="front">
+                <div class="logo"><span></span></div>
+              </div>
+              <div class="back">
+                <h1>Helen Parker<span>design <i>&</i> photography</span></h1>
+                <ul>
+                  <li>+1-111-111-11-11</li>
+                  <li>my-email@email.com</li>
+                  <li>my-site.com</li>
+                  </ul>
+              </div>
+              </div>
+            </div>
+        </div>
+    
+        <div class="column">
+            <div class="container1">
+    <div class="card">
+      <div class="front">
+        <div class="logo"><span></span></div>
+      </div>
+      <div class="back">
+        <h1>Helen Parker<span>design <i>&</i> photography</span></h1>
+        <ul>
+          <li>+1-111-111-11-11</li>
+          <li>my-email@email.com</li>
+          <li>my-site.com</li>
+          </ul>
+      </div>
+      </div>
+    </div>
+</div>
+</div>
+
+</header>
+
+<script>
+$(function() {
+    $('.material-card > .mc-btn-action').click(function () {
+        var card = $(this).parent('.material-card');
+        var icon = $(this).children('i');
+        icon.addClass('fa-spin-fast');
+
+        if (card.hasClass('mc-active')) {
+            card.removeClass('mc-active');
+
+            window.setTimeout(function() {
+                icon
+                    .removeClass('fa-arrow-left')
+                    .removeClass('fa-spin-fast')
+                    .addClass('fa-bars');
+
+            }, 800);
+        } else {
+            card.addClass('mc-active');
+
+            window.setTimeout(function() {
+                icon
+                    .removeClass('fa-bars')
+                    .removeClass('fa-spin-fast')
+                    .addClass('fa-arrow-left');
+
+            }, 800);
+        }
+    });
+});
+  </script>
+</body>
+</html>
+

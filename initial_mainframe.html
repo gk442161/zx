@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medic Hub</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/mainframe_style.css"> -->
+    <script src="javascript/jquerry.js" ></script>
+  </head>
+<body>
+  <header>
+      <script>
+          function openForm() {
+              document.getElementById("myForm").style.display = "block";
+            }
+
+          function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+            }
+          var slideIndex = 1;
+          showSlides(slideIndex);
+        // Next/previous controls
+          function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+        // Thumbnail image controls
+          function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+          function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) 
+                        {slideIndex = 1}
+                  if (n < 1) 
+                        {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";
+                    }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+                }
+      </script>
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+            
+        
+                    <!--
+                    <div class="logo">
+                    <img src="image/logo.jpg" height="120px" width="120px">
+                </div>-->
+
+                <h1 id='demo'>DEMO</h1>
+     <div class="navbar">
+         <nav class="fill">
+             <ul>
+
+                 <li><a href="#"><i class="fa fa-eye"></i>&nbsp;VISION</a></li>
+                 <li><!-- FORM CONTAINER -->
+                    <div class="dropdown">
+                          <button onclick="openForm()" class="dropbtn"><i class="fa fa-sign-in"></i>&nbsp;LOGIN</button>
+                      <div class="form-popup" id="myForm">
+                          <form action=>
+                                 <label for="email"><h4 class="faltu">Email</h4></label>
+                                 <input type="text" placeholder="Enter Email/Username" name="email" required id="username">
+                                 <label for="psw"><h4 class="faltu" >Password</h4></label>
+                                 <input type="password" placeholder="Enter Password" name="psw" required id="password" >
+                                 <div>
+                                 <button type="submit" class="btn submit" id="sbt">Login</button>
+                                </div>
+                                 <button type="button" class="btn cancel" id="cls">Close</button>
+                            </form>
+                        </div>
+                      </div>
+                  </li>
+                  <li><a href="selection.html"><i class="fa fa-user-plus"></i>&nbsp;SIGN-UP</a></li>
+
+              </ul>
+           </nav>
+        
+                <section style="background: #34495e; color: rgba(255, 255, 255, 0.5);"></section>
+      </div>
+    <br>
+
+
+
+    <div class="main1">
+      <div class="outerbox">
+        <div class="slider">
+          <img src="image/qimage1.jpg" height="450px" width="900px">
+          <img src="image/qimage2.jpg" height="450px" width="900px">
+          <img src="image/qimage3.jpg" height="450px" width="900px">
+          <img src="image/qimage4.jpg" height="450px" width="900px">
+         </div>
+        </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <br>
+  <br>
+    <div class="trends">
+      <h3><u>Trending Videos</u></h3>
+    </div>
+  <br>
+
+    <div class="abc">
+      <a href="https://www.webmd.com/diet/video/truth-about-drinking-water">
+        <div class="image1">
+          <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/video/truth_about_drinking_water_video/493x335_truth_about_drinking_water_video.jpg?[Mobile Label]WebMD Video?resize=250px:*" alt="glass of water">
+        </div>
+        <div class="text">
+          <h2 class="header1">Should You Drink 8 Glasses of Water a Day?</h2>
+        </div>
+    </div>
+    
+    <div class="def">
+      <a href="https://www.webmd.com/back-pain/video/sciatica-stretches">
+        <div class="image2">
+          <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/video/best_stretches_for_sciatica_video/493x335_best_stretches_for_sciatica_video.jpg?resize=250px:*" alt="sciatica exercises">
+        </div>
+        <div class="text">
+          <h2 class="header2">Stretches for Sciatica</h2>
+        </div>
+    </div>
+    
+    <div class="ghi">
+      <a href="https://www.webmd.com/heart-disease/heart-failure/video/widowmaker-inside-body">
+        <div class="image3">
+          <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/video/inside_the_body_widowmaker_heart_attack_video/493x335_inside_the_body_widowmaker_heart_attack_video.jpg?resize=250px:*" alt="widow maker heart attack">
+        </div>
+        <div class="text">
+          <h2 class="header3">Causes of a Widow-Maker Heart Attack</h2>
+        </div>
+    </div>
+    
+  </header>
+  
+  <script>
+    
+       const login_button=document.getElementById('sbt');
+       alert('you are in start');
+        login_button.addEventListener('click',function(e){
+                  e.preventDefault();
+                  alert('you are in eventlistner');
+                  $('#sbt').hide();
+                var xmlhttp;
+                if (window.XMLHttpRequest) { // for IE7+, Firefox, Chrome, Opera, Safari
+                    
+                xmlhttp = new XMLHttpRequest();
+                } else { // for IE6, IE5
+                    alert('now you are in else');
+                     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onload = function() {
+                  alert('in on load');
+                  document.getElementById("demo").innerHTML = xmlhttp.responseText;
+                                        // switch(parseInt(xmlhttp.responsetext)){
+                                        //         case 11: window.open('doctor.html','_self');
+                                        //                       break;
+                                        //          case 10:  window.open('patient.html','_self');
+                                        //                            break ;
+                                        //          default:    $('#validating').hide();
+                                        //                        $('#sbt').show();               
+                                                            
+                                        //               }
+                                           } 
+                                  
+                 xmlhttp.open("POST", "login.php", false);
+                 alert('now you are in data');
+                 xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                 
+                 alert('now you are in send');
+                 var data={'username':$('#username').val()};
+                 alert(data);
+                 function xwwwfurlenc(srcjson){
+                                    if(typeof srcjson !== "object")
+                                      if(typeof console !== "undefined"){
+                                        console.log("\"srcjson\" is not a JSON object");
+                                        return null;
+                                      }
+                                    u = encodeURIComponent;
+                                    var urljson = "";
+                                    var keys = Object.keys(srcjson);
+                                    for(var i=0; i <keys.length; i++){
+                                        urljson += u(keys[i]) + "=" + u(srcjson[keys[i]]);
+                                        if(i < (keys.length-1))urljson+="&";
+                                    }
+                                    return urljson;
+                                }
+
+                 function dexwwwfurlenc(urljson){
+                        var dstjson = {};
+                        var ret;
+                        var reg = /(?:^|&)(\w+)=(\w+)/g;
+                        while((ret = reg.exec(urljson)) !== null){
+                            dstjson[ret[1]] = ret[2];
+                        }
+                        return dstjson;
+                    }
+                    var username=$('#username').val();
+                    var password=$('#password').val();
+                  var data={'username':username,'password':password};
+                  
+                
+                 xmlhttp.send(xwwwfurlenc(data));
+
+                
+                });
+            
+
+       
+  </script>
+</body>
+</html>
