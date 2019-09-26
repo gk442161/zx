@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Medic Hub</title>
+  <title>Medic Hub</title>
+  <script src="javascript/jquerry.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/doctor_home.css">
 </head>
 <body>
@@ -48,7 +49,7 @@
                           </div>
                          
                         </div></li>
-                        <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;SIGN-OUT</a></li>
+                        <li><a href="#" id="sign_out"><i class="fa fa-sign-out"></i>&nbsp;SIGN-OUT</a></li>
                      
                     </ul>
                   </nav>
@@ -74,7 +75,7 @@
                       <br>
                       <div class="row">
                         <div class="column">
-                          <div class="card"><img src="image/cardimage.jpg.jpg" alt="Avatar" style="width:85%">
+                          <div class="card"><img src="image/cardimage.jpg" alt="Avatar" style="width:85%">
                             <div class="container">
                               <h4><b>John Doe</b></h4> 
                               <p>Architect & Engineer</p> 
@@ -82,7 +83,7 @@
                           </div>
                           </div>
                         <div class="column">
-                          <div class="card"><img src="image/cardimage.jpg.jpg" alt="Avatar" style="width:85%">
+                          <div class="card"><img src="image/cardimage.jpg" alt="Avatar" style="width:85%">
                             <div class="container">
                               <h4><b>Amay</b></h4> 
                               <p>Architect & Engineer</p> 
@@ -90,7 +91,7 @@
                           </div>
                         </div>
                         <div class="column">
-                          <div class="card"><img src="image/cardimage.jpg.jpg" alt="Avatar" style="width:85%">
+                          <div class="card"><img src="image/cardimage.jpg" alt="Avatar" style="width:85%">
                             <div class="container">
                               <h4><b>Ronit</b></h4> 
                               <p>Architect & Engineer</p> 
@@ -98,7 +99,7 @@
                           </div>
                         </div>
                         <div class="column">
-                          <div class="card"><img src="image/cardimage.jpg.jpg" alt="Avatar" style="width:85%">
+                          <div class="card"><img src="image/cardimage.jpg" alt="Avatar" style="width:85%">
                             <div class="container">
                               <h4><b>Anuj</b></h4> 
                               <p>Architect & Engineer</p> 
@@ -115,7 +116,7 @@
 <br>
                       <div class="row">
                         <div class="column">
-                          <div class="card"><img src="image/cardimage.jpg.jpg" alt="Avatar" style="width:85%">
+                          <div class="card"><img src="image/cardimage.jpg" alt="Avatar" style="width:85%">
                             <div class="container">
                               <h4><b>John Doe</b></h4> 
                               <p>Architect & Engineer</p> 
@@ -123,7 +124,7 @@
                           </div>
                           </div>
                         <div class="column">
-                          <div class="card"><img src="image/cardimage.jpg.jpg" alt="Avatar" style="width:85%">
+                          <div class="card"><img src="image/cardimage.jpg" alt="Avatar" style="width:85%">
                             <div class="container">
                               <h4><b>Amay</b></h4> 
                               <p>Architect & Engineer</p> 
@@ -131,7 +132,7 @@
                           </div>
                         </div>
                         <div class="column">
-                          <div class="card"><img src="image/cardimage.jpg.jpg" alt="Avatar" style="width:85%">
+                          <div class="card"><img src="image/cardimage.jpg" alt="Avatar" style="width:85%">
                             <div class="container">
                               <h4><b>Ronit</b></h4> 
                               <p>Architect & Engineer</p> 
@@ -139,7 +140,7 @@
                           </div>
                         </div>
                         <div class="column">
-                          <div class="card"><img src="image/cardimage.jpg.jpg" alt="Avatar" style="width:85%">
+                          <div class="card"><img src="image/cardimage.jpg" alt="Avatar" style="width:85%">
                             <div class="container">
                               <h4><b>Anuj</b></h4> 
                               <p>Architect & Engineer</p> 
@@ -181,7 +182,13 @@ $(function() {
                 }, 800);
             }
         });
-    });
+      $('#sign_out').on('click',function() {
+        $(this).fadeOut(200);
+        $(this).load('logout.php');
+        window.open('initial_mainframe.html','_self');}
+        );                                         });
+     
+      
       </script>
 </body>
 </html>
