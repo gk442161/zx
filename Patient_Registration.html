@@ -3,10 +3,10 @@
 <head>
 	<title>Patient_Registration</title>
 	<link rel="stylesheet" type="text/css" href="css/Patient_Registration_style.css">
-
+	<script src="javascript/jquerry.js"></script>
 
 <script language="JavaScript">
-<!--
+
 function calculateBmi() {
 var weight = document.form.weight.value
 var height = document.form.height.value
@@ -91,11 +91,11 @@ alert("Please Fill in everything correctly")
 
 		
 	<h1 >Let's create your account</h1>
-		<h1 >Already have an account?<a href="index.html">Login</a>
+		<h1 >Already have an account?<a href="initial_mainframe.html">Login</a>
 		</h1>
 		<br>
 
-		<form  name="form" type="get" action="Patient_Confirm_Details.html" class="form">
+		<form  name="form" type="get"  class="form">
 
 
 			<div class="box">
@@ -109,31 +109,35 @@ alert("Please Fill in everything correctly")
 			<div>
 					<label class="lab" style="margin-left:3%">First Name</label>
 				<span>
-					<input type="text" name="firstname" placeholder="Enter your first name"  required="required" title="Please enter your first name" style="margin-left: 10%;">
+					<input type="text" name="firstname" id="firstname" placeholder="Enter your first name"  required="required" title="Please enter your first name" style="margin-left: 10%;">
 				</span>
 				</div><br>
 				
 				<div>
 					<label class="lab" style="margin-left: 3%">Last Name</label>
-					<input type="text" name="lastname" placeholder="Enter your last name"  required="required" title="Please enter your last name" style="margin-left: 12%;">
+					<input type="text" name="lastname" id="lastname" placeholder="Enter your last name"  required="required" title="Please enter your last name" style="margin-left: 12%;">
 			</div>
 			<br>
-						
+			<div>
+				<label class="lab"style="margin-left: 3%">USERNAME</label>
+				<input type="text" name="username" id="username" placeholder="abc"  required="required"  style="margin-left: 17%;">
+			
+			</div><br>						
 
 			<div>
 				<label class="lab"style="margin-left: 3%">E-Mail</label>
-				<input type="email" name="email" placeholder="abc@xyz.com"  required="required" title="Please enter a valid email address" style="margin-left: 17%;">
+				<input type="email" name="email" id="email" placeholder="abc@xyz.com"  required="required" title="Please enter a valid email address" style="margin-left: 17%;">
 			
 			</div><br>
 
 			<div>
 				<label class="lab" style="margin-left: 4%">Phone Number</label>
-				<input type="phone" placeholder="### ### ####" name="phno" required="required" title="Please enter a 10 digit phone number" style="margin-left: 6%;">
+				<input type="phone" id="phone_number" placeholder="### ### ####" name="phno" required="required" title="Please enter a 10 digit phone number" style="margin-left: 6%;">
 			</div><br>
 
 			<div>
 				<label class="lab" style="margin-left: 3%">Password</label>
-				<input type="password" placeholder="Password" name="password" required="required" title="Password should greater than 6 characters" style="margin-left: 14%;">
+				<input type="password" id="password" placeholder="Password" name="password" required="required" title="Password should greater than 6 characters" style="margin-left: 14%;">
 			
 			</div><br>
 
@@ -319,7 +323,7 @@ alert("Please Fill in everything correctly")
 
 			<div>
 				<label class="lab" required="required" style="margin-left: 3%">Gender</label>
-				<select class="list" name="gender" required="required" style="margin-left: 16%;" >
+				<select class="list" id="gender" name="gender" required="required" style="margin-left: 16%;" >
 						
 						<option value>Select your gender</option>
 						<option value="Male">Male</option>
@@ -343,7 +347,7 @@ alert("Please Fill in everything correctly")
 
 
 			<div><label class="lab" style="margin-left: 3%">Blood Group</label>
-				<select class="list" name="blood_group" required="required" style="margin-left: 7%;">
+				<select class="list" id="blood_group" name="blood_group" required="required" style="margin-left: 7%;">
 					<option>Select your blood group</option>
 	
 					<option class="opt" value="O+">O+</option>
@@ -362,20 +366,20 @@ alert("Please Fill in everything correctly")
 			<div>			
 
 				<label class="lab" style="margin-left: 3%">Weight in Kg</label>
-				<input type="text" name="weight" required="required" title="Please enter your height"  style="margin-left: 7%;">
+				<input type="text" id="weight" name="weight" required="required" title="Please enter your height"  style="margin-left: 7%;">
 
 				<!--<span>kg</span>-->
 	</div><br>
 
 			<div>
 				<label class="lab" style="margin-left: 3%">Height in cms</label>
-				<input type="text" name="height"  required="required" title="Please enter your height" style="margin-left: 6%;">
+				<input type="text" name="height" id="height"  required="required" title="Please enter your height" style="margin-left: 6%;">
 				<br>
 				<br>
 						<button type="button" onclick="calculateBmi()">Calculate BMI</button><br>
 							
 							<label class="lab" style="margin-left: 3%" >Your Bmi:</label>
-								<input type="text" name="bmi" size="10" style="margin-left: 11%;"><br /><br>
+								<input type="text" name="bmi" id="bmi" size="10" style="margin-left: 11%;"><br /><br>
 
 							<label class="lab" style="margin-left: 3%">This means:</label>	
 								<input type="text" name="meaning" size="25" style="margin-left: 9%;"><br /><br>
@@ -392,12 +396,12 @@ alert("Please Fill in everything correctly")
 
 	<div>
 				<label class="lab" style="margin-left: 3%">Address</label>
-				<textarea class="text" rows="2" cols="40" required="required" name="address" placeholder="Address"   style="margin-left:16%;"></textarea>	
+				<textarea class="text" id="residental_detail" rows="2" cols="40" required="required" name="address" placeholder="Address"   style="margin-left:16%;"></textarea>	
 			</div>
 <br><br>
 			<div> <!--STATES LIST-->
 				<label class="lab"  style="margin-left: 2%">State/Union Territory</label>
-				<select class="list" name="state" required="required">
+				<select class="list"  name="state" required="required">
 								<option value="">Select your state</option>
 								<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 								<option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -456,7 +460,7 @@ alert("Please Fill in everything correctly")
 			<div>			
 
 				<label class="lab" style="margin-left: 3%">Any previous injuries</label>
-				<textarea class="text" name="injuries" placeholder="If any please mention" style="margin-left: 30%;"></textarea>
+				<textarea class="text" id="medical_background" name="injuries" placeholder="If any please mention" style="margin-left: 30%;"></textarea>
 	
 			</div>
 			<br>
@@ -476,13 +480,97 @@ alert("Please Fill in everything correctly")
 				<br><br>
 
 			<div>
-			<input class="submit" type=submit value="Next">	
+			<input class="submit" type=submit value="Next" id="sbt" >	
 			
 			<br>
 			<br>
 		</div>
 		</form>
-
+		<script>
+			const submit_button=document.getElementById('sbt');
+			alert('you are in start');
+					submit_button.addEventListener('click',function(e){
+							  e.preventDefault();
+							  alert('you are in eventlistner');
+							  $('#sbt').hide();
+					var xmlhttp;
+					if (window.XMLHttpRequest) { // for IE7+, Firefox, Chrome, Opera, Safari
+						 xmlhttp = new XMLHttpRequest();
+							} 
+						else { // for IE6, IE5
+								alert('now you are in else');
+								 xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+								}
+			
+					xmlhttp.onreadystatechange=function(){ 
+						alert('in onreadystate');
+						if (xmlhttp.readyState==4 && xmlhttp.status==200){
+							var rsp=xmlhttp.responseText.trim();
+							alert(rsp);
+							//MAIN PART
+							if(!rsp.localeCompare('success')){
+								window.open('Patient_ID_Generation.html','_self');
+							}
+							else{
+								$('#ERROR_IN_SUBMITTING').addClass('SHOW_SUBMIT_ERROR');
+								$('.SHOW_SUBMIT_ERROR').on('click',function(){
+									$(this).fadeOut(300);
+								});
+							}
+						}
+						//.....ERROR PART
+					};
+						alert('before post');
+					xmlhttp.open("POST", "php/Psigning_up_detail.php", false);
+							alert('after post');
+							xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+							 function xwwwfurlenc(srcjson){
+												if(typeof srcjson !== "object")
+												  if(typeof console !== "undefined"){
+													console.log("\"srcjson\" is not a JSON object");
+													return null;
+												  }
+												u = encodeURIComponent;
+												var urljson = "";
+												var keys = Object.keys(srcjson);
+												for(var i=0; i <keys.length; i++){
+													urljson += u(keys[i]) + "=" + u(srcjson[keys[i]]);
+													if(i < (keys.length-1))urljson+="&";
+												}
+												return urljson;
+											}
+			
+							   function dexwwwfurlenc(urljson){
+									var dstjson = {};
+									var ret;
+									var reg = /(?:^|&)(\w+)=(\w+)/g;
+									while((ret = reg.exec(urljson)) !== null){
+										dstjson[ret[1]] = ret[2];
+									}
+									return dstjson;
+								}
+							   
+							  
+								var data={
+									'firstname':$('#firstname').val(),
+									'lastname':$('#lastname').val(),
+									'email':$('#email').val(),
+									'username':$('#username').val(),
+									'phone_number':$('#phone_number').val(),
+									'password':$('#password').val(),
+									'dob':'30-07-1998',//$('#dob').val(),
+									'gender':$('#gender').val(),
+									'blood_group':$('#blood_group').val(),
+									'weight':$('#weight').val(),
+									'height':$('#height').val(),
+									'bmi':$('#bmi').val(),
+									'residental_detail':$('#residental_detail').val(),
+									'medical_background':$('#medical_background').val()}
+								 
+							xmlhttp.send(xwwwfurlenc(data));
+					});
+			
+			</script>
 
 </body>
 </html>

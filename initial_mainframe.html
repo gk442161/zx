@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Medic Hub</title>
-    <!-- <link rel="stylesheet" type="text/css" href="css/mainframe_style.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/mainframe_style.css">
     <script src="javascript/jquerry.js" ></script>
   </head>
 <body>
@@ -52,7 +52,7 @@
                     <img src="image/logo.jpg" height="120px" width="120px">
                 </div>-->
 
-                <h1 id='demo'>DEMO</h1>
+                
      <div class="navbar">
          <nav class="fill">
              <ul>
@@ -161,27 +161,45 @@
                     alert('now you are in else');
                      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                     }
-                    xmlhttp.onload = function() {
-                  alert('in on load');
-                  document.getElementById("demo").innerHTML = xmlhttp.responseText;
-                                        // switch(parseInt(xmlhttp.responsetext)){
-                                        //         case 11: window.open('doctor.html','_self');
-                                        //                       break;
-                                        //          case 10:  window.open('patient.html','_self');
-                                        //                            break ;
-                                        //          default:    $('#validating').hide();
-                                        //                        $('#sbt').show();               
+                  
+                    xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                  {alert('in on load');
+                  
+                  var rp=xmlhttp.responseText.trim();
+
+                                if(!rp.localeCompare("doctor")){
+
+                                  window.open('doctor_home.html','_self');
+                                              }
+                                        else{
+                                              if(!rp.localeCompare("patient")){                  
+                                                   window.open('patient_home.html','_self');}
+                                                 else{
+                                                         if (rp.localeCompare("password_invalid")==0) {
+                                                                      document.getElementById('password').append('<br>invalid password');
+                                                                      $('#validating').hide();
+                                                                      $('#sbt').show();
+                                                                   }
+                                                            else{
+                                                                $('#password').append('<br>INVALID USERNAME/EMAIL OR PASSWORD')
+                                                                $('#validating').hide();
+                                                                $('#sbt').fadeIn(3000); 
+                                                                }       
+                                                        }    
+                                                                 
                                                             
-                                        //               }
-                                           } 
+                                              }
+                                      }
+                                    } ;
                                   
                  xmlhttp.open("POST", "login.php", false);
                  alert('now you are in data');
                  xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                  
                  alert('now you are in send');
-                 var data={'username':$('#username').val()};
-                 alert(data);
+                 
                  function xwwwfurlenc(srcjson){
                                     if(typeof srcjson !== "object")
                                       if(typeof console !== "undefined"){
@@ -209,13 +227,13 @@
                     }
                     var username=$('#username').val();
                     var password=$('#password').val();
-                  var data={'username':username,'password':password};
                   
-                
-                 xmlhttp.send(xwwwfurlenc(data));
+                    var data={'username':username,'password':password};
+                     xmlhttp.send(xwwwfurlenc(data));
 
                 
-                });
+                }
+              );
             
 
        

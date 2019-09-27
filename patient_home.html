@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title>Medic Hub</title>
-	<link rel="stylesheet" type="text/css" href="css/patient_home.css">
+  <link rel="stylesheet" type="text/css" href="css/patient_home.css">
+  <script src="javascript/jquerry.js"></script>
 </head>
 <body>
     <header>
@@ -52,7 +53,7 @@
                           </div>
                          
                         </div></li>
-                        <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;SIGN-OUT</a></li>
+                        <li><a href="#" id="sign_out"><i class="fa fa-sign-out"></i>&nbsp;SIGN-OUT</a></li>
                      
                     </ul>
                   </nav>
@@ -148,4 +149,11 @@
                       </div></div>
 
 </body>
+
+<script>$('#sign_out').on('click',function() {
+        $(this).fadeOut(200);
+        $(this).load('logout.php');
+        window.open('initial_mainframe.html','_self');}
+        );   </script>
+
 </html>

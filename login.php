@@ -1,13 +1,12 @@
-
-<?php
-
+ <?php
+ //echo('doctor');
     include 'php/mysql_login.php';
 
     $conn=new mysqli($hostname,$username,$password,$database);
     if($conn->connect_error) die($conn->connect_error);
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+
+
 
 if(isset($_POST['username']) &&  isset($_POST["password"]))
 {
@@ -17,23 +16,32 @@ if(isset($_POST['username']) &&  isset($_POST["password"]))
     $hashed_pass=md5($pass);
   
     //USERNAME ALREADY PRESENT OR NOT
-    $result=$conn->query("SELECT username FROM main_login WHERE username='$username'");
-    $match_username=mysqli_fetch_assoc($result)['username'];
-    $match_password=mysqli_fetch_assoc($result)['password'];
-    $match_profession=mysqli_fetch_assoc($result)['profession'];
-    $email=mysqli_fetch_assoc($result)['email'];
-    printf("\n");
-    
-    if($match_username==$username &&  $match_password==$hashed_pass) 
-    {
-        echo '1'+$match_profession ;
-        session_start();
-        $_SESSION['username']=$match_username;
-        $_SESSION['email']=$email;
-        $_SESSION['id']=mysqli_fetch_assoc($result)['id'];
-    }
-    else{//IF NOT THEN ENTER NEW ENTERY
-        echo 0;
-        } 
+     $sql="SELECT * FROM main_login WHERE username='$username'";
+     $result=mysqli_query($conn,$sql);
+  if(!$result)   {
+      echo"querry failed";
+  }else{
+     if(mysqli_num_rows($result)>0){
+                $row=mysqli_fetch_assoc($result);
 
-    }
+                if($row['username']==$username){
+                 $match_password=$row['password'];
+                 $match_profession=$row['profession'];
+                 $email=$row['email'];
+                        if( $match_password==$hashed_pass) 
+                        {
+                         session_start();
+                         $_SESSION['username']=$username;
+                         $_SESSION['email']=$email;
+                         $_SESSION['id']=$row['id'];
+                        
+                        echo( $match_profession==='1' ? 'doctor':'patient');
+                    }
+              else{echo'password_invalid';}          
+         } }        
+        }
+
+} 
+
+$result->free();
+$conn->close();

@@ -3,6 +3,7 @@
 <head>
 	<title>Doctor_Registration</title>
 	<link rel="stylesheet" type="text/css" href="css/Doctor_Registration_style.css">
+<script src="javascript/jquerry.js"></script>
 </head>
 <body>
 	
@@ -62,7 +63,7 @@
 
 
 
-<form  name="form" type="get" action="Doctor_Confirm_Details.html" class="form">			
+<form  name="form" type="get"  class="form">			
 		<div class="box">
 		<label class="heading">Personal Details</label>
 			<br><br>
@@ -73,28 +74,34 @@
 
 			<label class="lab" style="margin-left:3%">First Name</label>
 				<span>
-					<input type="text" name="firstname" placeholder="Enter your first name"  required="required" title="Please enter your first name" style="margin-left: 13%;">
+					<input type="text" id="firstname" name="firstname" placeholder="Enter your first name"  required="required" title="Please enter your first name" style="margin-left: 13%;">
 				</span>
 			<br><br>
 				
 					<label class="lab" style="margin-left: 3%">Last Name</label>
-					<input type="text" name="lastname" placeholder="Enter your last name"  required="required" title="Please enter your last name" style="margin-left: 13%;">
+					<input type="text" id="lastname" name="lastname" placeholder="Enter your last name"  required="required" title="Please enter your last name" style="margin-left: 13%;">
 			
 			
 			<br><br>
 
 				<label class="lab"style="margin-left: 3%">E-Mail</label>
-				<input type="email" name="email" placeholder="abc@xyz.com"  required="required" title="Please enter a valid email address" style="margin-left: 18%;">
+				<input type="email" id="email" name="email" placeholder="abc@xyz.com"  required="required" title="Please enter a valid email address" style="margin-left: 18%;">
+			
+			<br><br>
+			<br><br>
+
+				<label class="lab"style="margin-left: 3%">USERNAME</label>
+				<input type="text" id="username" name="username" placeholder="abc"  required="required"  style="margin-left: 18%;">
 			
 			<br><br>
 
 				<label class="lab" style="margin-left: 3%">Phone Number</label>
-				<input type="phone" name="phno" placeholder="### ### ####"  required="required" title="Please enter a 10 digit phone number" style="margin-left: 7%;">
+				<input type="phone" name="phno" placeholder="### ### ####"  required="required" title="Please enter a 10 digit phone number" style="margin-left: 7%;"id="phone_number">
 			<br><br>
 
 			<div>
 				<label class="lab" style="margin-left: 3%">Password</label>
-				<input type="password" name="password" placeholder="Password"   title="Password should greater than 6 characters" required="required" style="margin-left: 14%;">
+				<input type="password" name="password" placeholder="Password"   title="Password should greater than 6 characters" required="required" style="margin-left: 14%;" id="password">
 			
 			</div>
 			<br><br>
@@ -102,6 +109,7 @@
 			<div>
 				<label class="lab" style="margin-left: 3%">Confirm Password</label>
 			<input type="password" name="c_password" placeholder="Confirm Password"   title="Password should greater than 6 characters" required="required" style="margin-left: 19px;"> 
+			
 			</div>
 			<br><br>
 
@@ -284,7 +292,7 @@
 <br><br>
 			<div>
 				<label class="lab" style="margin-left: 3%">Gender</label>
-				<select class="list" name="gender" required="required" style="margin-left: 17%;" >
+				<select class="list" name="gender" required="required" style="margin-left: 17%;" id="gender" >
 						
 						<option value>Select your gender</option>
 						<option value="Male">Male</option>
@@ -309,7 +317,7 @@
 			
 		
 				<label class="lab" style="margin-left: 3%">Blood Group</label>
-				<select class="list" name="blood_group" required="required" style="margin-left: 9%;">
+				<select class="list" name="blood_group" required="required" style="margin-left: 9%;" id="blood_group">
 					<option>Select your blood group</option>
 	
 					<option class="opt" value="O+">O+</option>
@@ -339,7 +347,7 @@
 					<input type="text" name="medicalschool" id="medicalschool" placeholder="Name of Medical school" required="required" style="margin-left:6%;">
 				<br><br>
 
-				<label class="lab" style="margin-left: 3%">Internships</label>
+				<label class="lab" style="margin-left: 3%" >Internships</label>
 					<input type="text" name="internships" id="internships" placeholder="Name of Medical school" required="required" style="margin-left:12%;">
 				<br><br>
 
@@ -847,7 +855,7 @@
 			
 			<div> <!--STATES LIST-->
 				<label class="lab" style="margin-left: 3%">State/Union Territory</label>
-				<select class="list" name="residental_state" required="required"	>
+				<select class="list" name="residental_state" required="required" id="residential_detail"	>
 								<option value="">Select your state</option>
 								<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
 								<option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -907,7 +915,7 @@
 <br>
 			<div>
 				<label class="lab" style="margin-left: 3%">Clinic Address</label>
-				<textarea class="text" rows="2" cols="40" required="required" name="clinic_address" placeholder="Address" style="margin-left:9%;"  ></textarea>	
+				<textarea class="text" rows="2" cols="40" required="required" name="clinic_address" placeholder="Address" style="margin-left:9%;" id="clinic_detail" ></textarea>	
 			</div><br>
 			
 			<div> <!--STATES LIST-->
@@ -973,11 +981,97 @@
 				<br><br>
 
 	<br>
-					<input class="submit" type=submit value="Next">	
+					<input class="submit" type=submit value="Next" id="sbt">	
 
 		</form>
+		<div id="ERROR_IN_SUBMITTING" style="text-align: center; display:none;">SORRY! COULDN'T SUBMIT <br>TRY AGAIN</div>
 
 <br><br>
+<script>
+const submit_button=document.getElementById('sbt');
+alert('you are in start');
+        submit_button.addEventListener('click',function(e){
+                  e.preventDefault();
+                  alert('you are in eventlistner');
+                  $('#sbt').hide();
+		var xmlhttp;
+        if (window.XMLHttpRequest) { // for IE7+, Firefox, Chrome, Opera, Safari
+			 xmlhttp = new XMLHttpRequest();
+                } 
+			else { // for IE6, IE5
+                    alert('now you are in else');
+                     xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+
+		xmlhttp.onreadystatechange=function(){ 
+			alert('in onreadystate');
+			if (xmlhttp.readyState==4 && xmlhttp.status==200){
+				var rsp=xmlhttp.responseText.trim();
+				alert(rsp);
+				//MAIN PART
+				if(!rsp.localeCompare('success')){
+					window.open('Doctor_ID_Generation.html','_self');
+				}
+				else{
+					$('#ERROR_IN_SUBMITTING').addClass('SHOW_SUBMIT_ERROR');
+					$('.SHOW_SUBMIT_ERROR').on('click',function(){
+						$(this).fadeOut(300);
+					});
+				}
+			}
+			//.....ERROR PART
+		};
+			alert('before post');
+		xmlhttp.open("POST", "php/Dsigning_up_detail.php", false);
+				alert('after post');
+				xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+ 				function xwwwfurlenc(srcjson){
+                                    if(typeof srcjson !== "object")
+                                      if(typeof console !== "undefined"){
+                                        console.log("\"srcjson\" is not a JSON object");
+                                        return null;
+                                      }
+                                    u = encodeURIComponent;
+                                    var urljson = "";
+                                    var keys = Object.keys(srcjson);
+                                    for(var i=0; i <keys.length; i++){
+                                        urljson += u(keys[i]) + "=" + u(srcjson[keys[i]]);
+                                        if(i < (keys.length-1))urljson+="&";
+                                    }
+                                    return urljson;
+                                }
+
+   				function dexwwwfurlenc(urljson){
+                        var dstjson = {};
+                        var ret;
+                        var reg = /(?:^|&)(\w+)=(\w+)/g;
+                        while((ret = reg.exec(urljson)) !== null){
+                            dstjson[ret[1]] = ret[2];
+                        }
+                        return dstjson;
+                    }
+                   
+                  
+                    var data={
+						'firstname':$('#firstname').val(),
+						'lastname':$('#lastname').val(),
+						'email':$('#email').val(),
+						'username':$('#username').val(),
+						'phone_number':$('#phone_number').val(),
+						'password':$('#password').val(),
+						'dob':'30-07-1998',//$('#dob').val(),
+						'gender':$('#gender').val(),
+						'blood_group':$('#blood_group').val(),
+						'medical_school':$('#medical_school').val(),
+						'internship':$('#internship').val(),
+						'speciality':$('#speciality').val(),
+						'residential_detail':$('#residential_detail').val(),
+						'clinic_detail':$('#clinic_detail').val()}
+                     
+				xmlhttp.send(xwwwfurlenc(data));
+		});
+
+</script>
 
 </body>
 </html>
