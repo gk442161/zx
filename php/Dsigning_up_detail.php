@@ -61,10 +61,7 @@ if (!$result) {
                 ) where id=$id and username='$username'";
                 $result4=mysqli_query($conn,$sql_insert_mainDetail);
                 if (!$result4) {echo "querry4 failed ".mysqli_error($conn);}
-                else{session_start();
-                    $_SESSION['username']=$username;
-                    $_SESSION['email']=$email;
-                    $_SESSION['id']=$id;
+                else{
                     echo $status[2];
                 }
 
