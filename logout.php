@@ -1,5 +1,8 @@
 <?php
+
+
 session_start();
+
 session_destroy();
-echo 'You have been logged out. <a href="MainFrame.html">Go back</a>';
-?>
+echo 'You have been logged out. ';
+// ?>
