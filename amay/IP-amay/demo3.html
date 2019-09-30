@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medic Hub</title>
+  <link rel="stylesheet" type="text/css" href="css/demo3.css">
+</head>
+<body>
+    <header>
+      
+    <script>
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+      </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+            <div class="navbar">
+                    <!--
+                    <div class="logo">
+                    <img src="image/logo.jpg" height="120px" width="120px">
+                </div>-->
+
+
+
+                <nav class="fill">
+                    <ul>
+                          <li><a href="#"><i class="fa fa-eye"></i>&nbsp;VISION</a></li>
+                  
+                      <li>
+<div class="dropdown">
+                          <button onclick="openForm()" class="dropbtn"><i class="fa fa-sign-in"></i>&nbsp;LOGIN</button>
+                         <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    
+
+    <label for="email"><h4 class="faltu">Email</h4></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><h4 class="faltu">Password</h4></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+                        </div>
+
+</li>
+                        <li><a href="#"><i class="fa fa-user-plus"></i>&nbsp;SIGN-UP</a></li>
+                     
+                    </ul>
+                  </nav>
+                </section>
+                <section style="background: #34495e; color: rgba(255, 255, 255, 0.5);">
+            </div><br>
+
+
+
+                     <div class="main1">
+    <div class="outerbox">
+      <div class="slider">
+        <img src="image/qimage1.jpg" height="450px" width="900px">
+        <img src="image/qimage2.jpg" height="450px" width="900px">
+        <img src="image/qimage3.jpg" height="450px" width="900px">
+        <img src="image/qimage4.jpg" height="450px" width="900px">
+ 
+      </div>
+
+    </div>
+     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+<br>
+<br>
+ <div  class="pane" tabindex="-1">
+                        <div class="breadcrumb">
+                        <ul data-metrics-module="brdcrmb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                        </ul>
+                        </div>
+                        <div class="hero-with-caption module " id="prm-hp" data-metrics-module="prm-hp">
+                        <a href="https://www.webmd.com/mental-health/addiction/news/20190905/are-vaping-ailments-linked-to-bootleg-cartridges" data-metrics-link="lnk">
+                          <span>
+                            <img class="paneimage" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/vaping_1_other/1800x1200_vaping_1_other.jpg?resize=*:350px" alt="photo of person vaping" align="right">
+                          </span>
+                          </a><div class="caption"><a href="https://www.webmd.com/mental-health/addiction/news/20190905/are-vaping-ailments-linked-to-bootleg-cartridges" data-metrics-link="lnk">
+                            <h2 id="amay">What's Causing So Many Vaping-Related Lung Problems?</h2>
+                            
+                            <p id ="naik">An ER doctor sees a common thread among patients.</p>
+                            
+                            </a><ul><a href="https://www.webmd.com/mental-health/addiction/news/20190905/are-vaping-ailments-linked-to-bootleg-cartridges" data-metrics-link="lnk">
+                              </a><li><a href="https://www.webmd.com/mental-health/addiction/news/20190905/are-vaping-ailments-linked-to-bootleg-cartridges" data-metrics-link="lnk">
+                                </a><a class="qq" href="https://www.webmd.com/mental-health/addiction/news/20190906/death-toll-rises-in-vaping-cases-skyrocket" data-metrics-link="more-1"> More: 5 Deaths From Vaping-Related Lung Disease</a>
+                                <br><br><br><br><br><br>
+                                <br></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                          <br>
+                        
+<div class="trends">
+<h3><u>Trending Videos</u></h3></div>
+<br>
+ 
+
+
+  <div class="abc">
+    
+      <a href="https://www.webmd.com/diet/video/truth-about-drinking-water">
+        <div class="image1">
+          <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/video/truth_about_drinking_water_video/493x335_truth_about_drinking_water_video.jpg?[Mobile Label]WebMD Video?resize=250px:*" alt="glass of water">
+        </div>
+        <div class="text">
+          <h2 class="header1">Should You Drink 8 Glasses of Water a Day?</h2>
+          <h4 class="def_text">Drinking water flushes toxins from your body. Fact. Though water doesn't necessarily neutralize toxins, the kidneys do use water to get rid of certain waste products.</h4>
+        </div>
+      </div>
+    <br>
+     <div class="def">
+    
+      <a href="https://www.webmd.com/back-pain/video/sciatica-stretches">
+        <div class="image2">
+          <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/video/best_stretches_for_sciatica_video/493x335_best_stretches_for_sciatica_video.jpg?resize=250px:*" alt="sciatica exercises">
+        </div>
+        <div class="text">
+          <h2 class="header2">Stretches for Sciatica</h2>
+          <h4 class="def_text"> Sciatic nerve pain can be so excruciating and debilitating that you don’t even want to get off the couch.<br>Common causes of sciatica can include a ruptured disk, a narrowing of the spine canal (called spinal stenosis), and injury.</h4>
+        </div>
+      </div>
+      <br>
+    
+     <div class="ghi">
+    
+      <a href="https://www.webmd.com/heart-disease/heart-failure/video/widowmaker-inside-body">
+        <div class="image3">
+          <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/video/inside_the_body_widowmaker_heart_attack_video/493x335_inside_the_body_widowmaker_heart_attack_video.jpg?resize=250px:*" alt="widow maker heart attack">
+        </div>
+        <div class="text">
+          <h2 class="header3">Causes of a Widow-Maker Heart Attack</h2>
+          <h4 class="def_text">Drinking water flushes toxins from your body. Fact. Though water doesn't necessarily neutralize toxins, the kidneys do use water to get rid of certain waste products</h4>
+        </div>
+      </div>
+      <br>
+    
+   
+</header>
+</body>
+</html>

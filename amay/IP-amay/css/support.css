@@ -1,0 +1,201 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .navbar{
+    background-color: #f0f8ff;
+    overflow: hidden;
+  }
+  
+  
+  .logo{
+    margin-left:2px;
+    padding: 4px 6px;
+  }
+   .vertical-menu a.active {
+        background-color: rgb(205, 214, 206); /* Add a green color to the "active/current" link */
+        color: white;
+      }
+  
+  .navbar a{
+    margin-right: 20px;
+    float: right;
+    color:rgba(76, 56, 112, 0.822);
+    text-align: center;
+    padding: 14px 6px;
+    text-decoration: none;
+    text-transform: uppercase;  
+    font-size: 17px;
+  }
+  .navbar a:hover{
+    background-color: black;
+  
+  }
+  
+  
+
+
+      .fa {
+        
+        font-size: 17px;
+        width: 18px;
+        text-align: center;
+        text-decoration: none;
+      }
+      
+    
+    
+
+      nav {
+        width: 80%;
+        margin: 0 auto;
+        background:transparent;
+        padding: 4px 0;
+        float: right;
+        box-shadow: 0px 5px 0px #dedede;
+      }
+      nav ul {
+        list-style: none;
+        text-align: right;
+      }
+      nav ul li {
+        display: inline-block;
+       
+      }
+      nav ul li a {
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+        color: #aaa;
+        font-weight: 80;
+        float :right;
+        text-transform: uppercase;
+        margin: 0 10px;
+      }
+      nav ul li a,
+      nav ul li a:after,
+      nav ul li a:before,.dropbtn:hover{
+        transition: all .5s;
+      }
+      nav ul li a:hover ,.dropbtn:hover{
+        color: #white;
+      }
+
+      
+      nav.fill ul li a,.dropbtn:hover {
+        transition: all 1s;
+      }
+      
+      nav.fill ul li a:after ,.dropbtn:hover{
+        text-align: left;
+      
+        margin: 0;
+        opacity: 0;
+      }
+      nav.fill ul li a:hover,.dropbtn:hover {
+        color: rgb(230, 62, 62);
+        z-index: 1;
+      }
+      nav.fill ul li a:hover:after,.dropbtn:hover {
+        z-index: -10;
+        animation: fill 1s forwards;
+        -webkit-animation: fill 1s forwards;
+        -moz-animation: fill 1s forwards;
+        opacity: 1;
+      }
+
+
+
+      .MEDIC h1{
+
+    font-weight: 400;
+    font-family:GT Super display;
+
+    font-size: 70px;
+    color: #255C45;
+font-style: bold;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .section h1{
+    margin-top: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    color: #255C45;
+    text-align: center;
+    font-size:60px; 
+     font-weight: 400;
+    font-family:GT Super display;
+
+  }
+.accordion {
+  background-color: transparent;
+    color: #255C45;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border-style:none none solid none;
+  text-align: left;
+  outline:none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+.accordion h3{
+     font-size: 30px;
+    color: #255C45;
+font-style: bold;
+
+ font-weight: 400;
+ padding:10px 50px 0px 200px;
+    font-family:GT Super display;
+   
+
+
+}
+
+.active, .accordion:hover {
+  background-color: #DCF0FB;
+
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-size: 30px;
+  font-weight: bold;
+  float: right;
+  margin-right:300px;
+
+}
+
+.active:after {
+  content: "\2212";
+
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height:0;
+  overflow: hidden;
+
+  transition: max-height 0.2s ease-out;
+}
+p{
+  color: #004D49;
+  font:20px Ginto,Helvetica,sans-serif;
+  margin-right: 300px;
+  margin-left: 200px;
+}
+

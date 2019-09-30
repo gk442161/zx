@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medic Hub</title>
+  <link rel="stylesheet" type="text/css" href="css/mainframe_style.css">
+</head>
+<body>      <script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
+
+</script>
+    <header>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    
+  <div class="navbar">
+                    <!--
+                    <div class="logo">
+                    <img src="image/logo.jpg" height="120px" width="120px">
+                </div>-->
+
+
+
+                <nav class="fill">
+                    <ul>
+                          <li><a href="support.html"><i class="fa fa-eye"></i>&nbsp;FAQ/SUPPORT</a></li>
+                  
+                      <li><a href="#"><i class="fa fa-user-plus"></i>&nbsp;SIGN-UP</a></li>
+                        <li><a href="login.html">&nbsp;SIGN-IN</a></li>
+                     
+                    </ul>
+                  </nav>
+                </section>
+                <section style="background: #34495e; color: rgba(255, 255, 255, 0.5);">
+            </div><br>
+
+      <div class="image1">
+  
+  <img src="image/image2.jpg" style="width:100%">
+  
+</div>
+<br>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="image/qimage1.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="image/qimage2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="image/qimage3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+<br>
+<br>
+
+
+<div  class="pane" tabindex="-1">
+                        <div class="breadcrumb">
+                        <ul data-metrics-module="brdcrmb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                        </ul>
+                        </div>
+                        <div class="hero-with-caption module " id="prm-hp" data-metrics-module="prm-hp">
+                        <a href="https://www.webmd.com/mental-health/addiction/news/20190905/are-vaping-ailments-linked-to-bootleg-cartridges" data-metrics-link="lnk">
+                          <span>
+                            <img class="paneimage" src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/vaping_1_other/1800x1200_vaping_1_other.jpg?resize=*:350px" alt="photo of person vaping" align="right">
+                          </span>
+                          </a><div class="caption"><a href="https://www.webmd.com/mental-health/addiction/news/20190905/are-vaping-ailments-linked-to-bootleg-cartridges" data-metrics-link="lnk">
+                            <h2 id="amay">What's Causing So Many Vaping-Related Lung Problems?</h2>
+                            
+                            <p id ="naik">An ER doctor sees a common thread among patients.</p>
+                            
+                            </a><ul><a href="https://www.webmd.com/mental-health/addiction/news/20190905/are-vaping-ailments-linked-to-bootleg-cartridges" data-metrics-link="lnk">
+                              </a><li><a href="https://www.webmd.com/mental-health/addiction/news/20190905/are-vaping-ailments-linked-to-bootleg-cartridges" data-metrics-link="lnk">
+                                </a><a class="qq" href="https://www.webmd.com/mental-health/addiction/news/20190906/death-toll-rises-in-vaping-cases-skyrocket" data-metrics-link="more-1"> More: 5 Deaths From Vaping-Related Lung Disease</a>
+                                <br><br><br><br><br><br>
+                                <br></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                          <br>
+                        <br>
+ <br>
+                        <br>
+
+
+       <div class="copy"><div class="vc_row wpb_row vc_inner vc_row-fluid vc_custom_1549386094916 vc_row-has-fill vc_row-o-equal-height vc_row-flex vc_row_490311668" style="width: 100%; max-width: 1300px;margin-left: auto; margin-right: auto;"><div class="wpb_column vc_column_container vc_col-sm-4 vc_column_525048337"><div class="vc_column-inner "><div class="wpb_wrapper" style="width: 100%; max-width: 300px;margin-left: 200px; margin-right: auto;">
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-vS4MhrBdwO  " style="height: 50px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+  <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1537537596106">
+    
+    <figure class="wpb_wrapper vc_figure">
+      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="127" height="94" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/23/2018/09/icon3_0004_.jpg" class="vc_single_image-img attachment-full" alt=""></div>
+    </figure>
+  </div>
+
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-dtSM7gemTX  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div class="sh-heading  " id="heading-HS6NmOYezi">
+  <div class="sh-element-margin">
+
+    
+      <h2 class="sh-heading-content size-custom text-left">
+        Ophthalmology     </h2>
+
+    
+  </div>
+</div>
+            <style type="text/css">
+                #heading-HS6NmOYezi .sh-element-margin {}#heading-HS6NmOYezi .sh-heading-content {font-size: 18px;font-weight: 600!important;}#heading-HS6NmOYezi .sh-heading-content,#heading-HS6NmOYezi .sh-heading-additional-text {font-family: 'Montserrat'!important;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-LHZBFWESQd  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div id="text-block-qoaOMzVTvc" class="sh-text-block">
+  Ophthalmology is a branch of medicine and surgery which deals with the diagnosis and treatment of eye disor-<br>-ders. An ophthalmologist is a specialist <br>in ophthalmology. The credentials incl-<br>-ude a degree in medicine, followed by additional four to five years of ophthalmology residency training. </div>
+            <style type="text/css">
+                #text-block-qoaOMzVTvc {color: #363636;margin: 0px 0px 15px 0px;}#text-block-qoaOMzVTvc a:hover,#text-block-qoaOMzVTvc a:focus {color: #10a0c0;}#text-block-qoaOMzVTvc .drop-cap {font-weight: bold;font-size: 50px;display: block;float: left;margin: 8px 10px 0 0;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-tugXQAGTW5  " style="height: 80px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+  <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1537537682420">
+    
+    <figure class="wpb_wrapper vc_figure">
+      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="127" height="94" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/23/2018/09/icon3_0002_.jpg" class="vc_single_image-img attachment-full" alt=""></div>
+    </figure>
+  </div>
+
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-AvTlXINQ80  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div class="sh-heading  " id="heading-4bh208gKNx">
+  <div class="sh-element-margin">
+
+    
+      <h2 class="sh-heading-content size-custom text-left">
+        Laboratory      </h2>
+
+    
+  </div>
+</div>
+            <style type="text/css">
+                #heading-4bh208gKNx .sh-element-margin {}#heading-4bh208gKNx .sh-heading-content {font-size: 18px;font-weight: 600!important;}#heading-4bh208gKNx .sh-heading-content,#heading-4bh208gKNx .sh-heading-additional-text {font-family: 'Montserrat'!important;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-ZI1JsH26nR  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div id="text-block-VRaS5hC12T" class="sh-text-block">
+ A laboratory  is a facility that provides controlled conditions in which scientific or technological research, experiments, and measurement may be performed. Laboratory services are provided in a variety of settings: physicians offices, clinics, hospitals, and regional and national referral centers.</div>
+            <style type="text/css">
+                #text-block-VRaS5hC12T {color: #363636;margin: 0px 0px 15px 0px;}#text-block-VRaS5hC12T a:hover,#text-block-VRaS5hC12T a:focus {color: #10a0c0;}#text-block-VRaS5hC12T .drop-cap {font-weight: bold;font-size: 50px;display: block;float: left;margin: 8px 10px 0 0;}            </style>
+        <style type="text/css"> .vc_column_525048337:not(.vc_parallax):not(.jarallax) { overflow: center!important; position: relative; }</style></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4 vc_column_1705575454"><div class="vc_column-inner "><div class="wpb_wrapper" style="width: 100%; max-width: 300px;margin-left: auto; margin-right: auto;">
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-XTv7HyISYE  " style="height: 50px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+  <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1537537619945">
+    
+    <figure class="wpb_wrapper vc_figure">
+      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="127" height="94" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/23/2018/09/icon3_0005_.jpg" class="vc_single_image-img attachment-full" alt=""></div>
+    </figure>
+  </div>
+
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-yHco1N28Og  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div class="sh-heading  " id="heading-Dn5ritjlGA">
+  <div class="sh-element-margin">
+
+    
+      <h2 class="sh-heading-content size-custom text-left">
+        Cardiology      </h2>
+
+    
+  </div>
+</div>
+            <style type="text/css">
+                #heading-Dn5ritjlGA .sh-element-margin {}#heading-Dn5ritjlGA .sh-heading-content {font-size: 18px;font-weight: 600!important;}#heading-Dn5ritjlGA .sh-heading-content,#heading-Dn5ritjlGA .sh-heading-additional-text {font-family: 'Montserrat'!important;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-FkiMlpeDuN  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div id="text-block-8LlTwuJ3yX" class="sh-text-block">
+  Cardiology  is a branch of medicine that deals with the disorders of the heart as well as some parts of the circulatory system. The field includes medical diagnosis and treatment of congenital heart defects, coronary artery disease, heart failure, valvular heart disease and electrophysiology</div>
+            <style type="text/css">
+                #text-block-8LlTwuJ3yX {color: #363636;margin: 0px 0px 15px 0px;}#text-block-8LlTwuJ3yX a:hover,#text-block-8LlTwuJ3yX a:focus {color: #10a0c0;}#text-block-8LlTwuJ3yX .drop-cap {font-weight: bold;font-size: 50px;display: block;float: left;margin: 8px 10px 0 0;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-huj6JIAleP  " style="height: 80px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+  <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1537537701964">
+    
+    <figure class="wpb_wrapper vc_figure">
+      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="127" height="94" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/23/2018/09/icon3_0001_.jpg" class="vc_single_image-img attachment-full" alt=""></div>
+    </figure>
+  </div>
+
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-6u4L3hsXqo  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div class="sh-heading  " id="heading-wBm120lP7d">
+  <div class="sh-element-margin">
+
+    
+      <h2 class="sh-heading-content size-custom text-left">
+        Pediatrics      </h2>
+
+    
+  </div>
+</div>
+            <style type="text/css">
+                #heading-wBm120lP7d .sh-element-margin {}#heading-wBm120lP7d .sh-heading-content {font-size: 18px;font-weight: 600!important;}#heading-wBm120lP7d .sh-heading-content,#heading-wBm120lP7d .sh-heading-additional-text {font-family: 'Montserrat'!important;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-wq5diUCMjA  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div id="text-block-KZuYjm047Q" class="sh-text-block">
+ Pediatrics  is the branch of medicine that involves the medical care of infants, children, and adolescents. The American Academy of Pediatrics recommends people be under pediatric care up to the age of 21, thought usually only minors under 18 are required to be under pediatric care. A medical doctor who specializes in this area is known as a pediatrician, or paediatrician. </div>
+            <style type="text/css">
+                #text-block-KZuYjm047Q {color: #363636;margin: 0px 0px 15px 0px;}#text-block-KZuYjm047Q a:hover,#text-block-KZuYjm047Q a:focus {color: #10a0c0;}#text-block-KZuYjm047Q .drop-cap {font-weight: bold;font-size: 50px;display: block;float: left;margin: 8px 10px 0 0;}            </style>
+        <style type="text/css"> .vc_column_1705575454:not(.vc_parallax):not(.jarallax) { overflow: center!important; position: relative; }</style></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4 vc_column_656148751"><div class="vc_column-inner "><div class="wpb_wrapper" style="width: 100%; max-width: 300px;margin-left: auto; margin-right: auto;">
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-q15SBCPYvH  " style="height: 50px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+  <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1537537636409">
+    
+    <figure class="wpb_wrapper vc_figure">
+      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="127" height="94" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/23/2018/09/icon3_0003_.jpg" class="vc_single_image-img attachment-full" alt=""></div>
+    </figure>
+  </div>
+
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-WdlfOA5euj  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div class="sh-heading  " id="heading-Wgqm6HX9jl">
+  <div class="sh-element-margin">
+
+    
+      <h2 class="sh-heading-content size-custom text-left">
+        Dentistry     </h2>
+
+    
+  </div>
+</div>
+            <style type="text/css">
+                #heading-Wgqm6HX9jl .sh-element-margin {}#heading-Wgqm6HX9jl .sh-heading-content {font-size: 18px;font-weight: 600!important;}#heading-Wgqm6HX9jl .sh-heading-content,#heading-Wgqm6HX9jl .sh-heading-additional-text {font-family: 'Montserrat'!important;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-Uv65uJbcxk  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div id="text-block-yqGJf781gR" class="sh-text-block">
+ Dentistry, also known as Dental and Oral Medicine, is a branch of medicine that consists of the study, diagnosis, prevention, and treatment of diseases, disorders, and conditions of the oral cavity, commonly in the dentition but also the oral mucosa, and of adjacent and related structures and tissues area.</div>
+            <style type="text/css">
+                #text-block-yqGJf781gR {color: #363636;margin: 0px 0px 15px 0px;}#text-block-yqGJf781gR a:hover,#text-block-yqGJf781gR a:focus {color: #10a0c0;}#text-block-yqGJf781gR .drop-cap {font-weight: bold;font-size: 50px;display: block;float: left;margin: 8px 10px 0 0;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-lafzqjetTC  " style="height: 80px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+  <div class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1537537716795">
+    
+    <figure class="wpb_wrapper vc_figure">
+      <div class="vc_single_image-wrapper   vc_box_border_grey"><img width="127" height="94" src="https://cdn.jevelin.shufflehound.com/wp-content/uploads/sites/23/2018/09/icon3_0000_.jpg" class="vc_single_image-img attachment-full" alt=""></div>
+    </figure>
+  </div>
+
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-xYmIiUe4rT  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div class="sh-heading  " id="heading-3zuWCMfvjr">
+  <div class="sh-element-margin">
+
+    
+      <h2 class="sh-heading-content size-custom text-left">
+        Radiology     </h2>
+
+    
+  </div>
+</div>
+            <style type="text/css">
+                #heading-3zuWCMfvjr .sh-element-margin {}#heading-3zuWCMfvjr .sh-heading-content {font-size: 18px;font-weight: 600!important;}#heading-3zuWCMfvjr .sh-heading-content,#heading-3zuWCMfvjr .sh-heading-additional-text {font-family: 'Montserrat'!important;}            </style>
+        
+            
+            <div class="sh-empty-space vc_empty_space sh-empty-space-3k8p7vP6UV  " style="height: 20px">
+                <span class="vc_empty_space_inner"></span>
+            </div>
+
+        
+<div id="text-block-Nw0jLXdInm" class="sh-text-block">
+  A variety of imaging techniques such as X-ray radiography, ultrasound, computed tomography ,nuclear medicine including positron emission tomography, and magnetic resonance imaging are used to diagnose or treat diseases.Radiology is the medical specialty that uses medical imaging to diagnose and treat diseases within the bodies of both humans and animals.
+</div>
+            <style type="text/css">
+                #text-block-Nw0jLXdInm {color: #363636;margin: 0px 0px 15px 0px;}#text-block-Nw0jLXdInm a:hover,#text-block-Nw0jLXdInm a:focus {color: #10a0c0;}#text-block-Nw0jLXdInm .drop-cap {font-weight: bold;font-size: 50px;display: block;float: left;margin: 8px 10px 0 0;}            </style>
+        <style type="text/css"> .vc_column_656148751:not(.vc_parallax):not(.jarallax) { overflow: center!important; position: relative; }</style></div></div></div><style type="text/css">@media (max-width: 800px) { #content .vc_row_490311668 { padding: 0px 40px 40px 40px!important;}}</style></div>
+      </div><br>
+<br><br> <br>
+                        <br>
+
+      <div class="bgimg">
+  
+  <div class="middle">
+    <h1>LAUNCHING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px color:#255C45"></p>
+    <br>
+    <br> <br>
+                        <br>
+
+    <br>
+  </div>
+ 
+</div>
+<br>
+<br>
+
+</section>
+
+
+
+<div class="footer">
+  <p>Copyright © 2019 Powered by- Team Medic Hub<br>--All RightsReserved</p>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
+
+</div>
+
+
+    </header>
+    </body><script>var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+  
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+  
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (10000* 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+ybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+    </html>
