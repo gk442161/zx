@@ -1,0 +1,76 @@
+<html>
+    <script src="../baga/javascript/jquerry.js"></script>
+    <style>
+    
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <body>
+        <div id="appointments"></div>
+        <div>
+            <table>
+                <tr>
+                    <td>PATIENT NAME</td>
+                    <TD>PHONE NUMBER</TD>
+                    <td>APPOINTMENT TIMING</td>
+                    <TD>STATUS</TD>
+                </tr>
+
+            </table>
+        </div>
+
+      <script>
+
+          $(document).ready(function(){
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function()
+                    {
+                     if (xhr.readyState==4 && xhr.status==200)
+                  {alert('done');
+                    rp=xhr.responseText;
+                    $('tr').after(rp);
+                    }
+                                    } ;
+            xhr.open("POST", "doctor_appts.php", false);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.send("app_made=yes");
+
+            $('.not_done').children('TD:nth-of-type(4)').css('background-color','green');
+            //$('.done').after('<p style="background-color:green;width:20%">PATIENT IS CHECKED</p>');
+
+            $('tr.not_done').on('click',function(){
+                $(this).css({'background-color':'black','font-size':'large'});
+                alert($(this).text());
+                var xhr1=new XMLHttpRequest();
+                xhr1.onreadystatechange=function()
+                    {
+                     if (xhr1.readyState==4 && xhr.status==200)
+                  {alert('done-done');
+                   //rp=xhr1.responseText;
+                   // $(this).append(rp);
+                    }
+                                    } ;
+                $obj={"done":"yes","slot_id":$(this).attr('id')};
+                $obj=JSON.stringify($obj);
+                xhr1.open("POST", "doctor_appts.php", false);
+                xhr1.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr1.send("x="+$obj);
+
+            });
+          });   
+        </script>
+    </body>
+</html>

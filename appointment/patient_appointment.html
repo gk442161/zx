@@ -1,0 +1,73 @@
+<html>
+    <script src="../baga/javascript/jquerry.js"></script>
+    <body>
+        
+        <input type="text" id="doctor_username" placeholder="enter doctor_username"> 
+        <select name="slot_timing" id="slot_id">
+            <option value="1">11:00</option>
+            <option value="2">11:15</option>
+            <option value="3">11:30</option>
+            <option value="4">11:45</option>
+            <option value="5">12:00</option>
+
+        </select>
+        <button type="text" id="adding" value="add">add</button>
+        <button type="text" id="removing" value="remove">remove</button>
+        
+    </body>
+
+    <script>
+         var xhr;
+                  if (window.XMLHttpRequest) { // for IE7+, Firefox, Chrome, Opera, Safari
+                    xhr = new XMLHttpRequest();
+                    } 
+                    else { // for IE6, IE5
+                     xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+          
+        
+            xhr.onreadystatechange=function()
+                    {
+                     if (xhr.readyState==4 && xhr.status==200)
+                  {alert('done');
+                    }
+                                    } ;
+
+        xhr.open("POST", "app_by_patient.php", false);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        function xwwwfurlenc(srcjson){
+                                    if(typeof srcjson !== "object")
+                                      if(typeof console !== "undefined"){
+                                        console.log("\"srcjson\" is not a JSON object");
+                                        return null;
+                                      }
+                                    u = encodeURIComponent;
+                                    var urljson = "";
+                                    var keys = Object.keys(srcjson);
+                                    for(var i=0; i <keys.length; i++){
+                                        urljson += u(keys[i]) + "=" + u(srcjson[keys[i]]);
+                                        if(i < (keys.length-1))urljson+="&";
+                                    }
+                                    return urljson;
+                                }
+
+        function dexwwwfurlenc(urljson){
+                        var dstjson = {};
+                        var ret;
+                        var reg = /(?:^|&)(\w+)=(\w+)/g;
+                        while((ret = reg.exec(urljson)) !== null){
+                            dstjson[ret[1]] = ret[2];
+                        }
+                        return dstjson;
+                    }
+        $('#removing').on('click',function(){
+        var data={'slot_id':$('#slot_id').val(),'D_username':$('#doctor_username').val(),'remove':'remove'}; 
+        xhr.send(xwwwfurlenc(data)) ;
+        });
+        $('#adding').on('click',function(){
+        var data={'slot_id':$('#slot_id').val(),'D_username':$('#doctor_username').val(),'add':'add'}; 
+        xhr.send(xwwwfurlenc(data)) ;
+        });
+
+    </script>
+</html>
