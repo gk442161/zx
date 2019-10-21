@@ -1,0 +1,174 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Patient_Confirm_Details</title>
+	<link rel="stylesheet" type="text/css" href="css/Patient_Confirm_Details_style.css">
+</head>
+
+<body>
+
+
+
+	<header>
+        <script>
+
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
+
+      </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+            <div class="navbar">
+                    <!--
+                    <div class="logo">
+                    <img src="image/logo.jpg" height="120px" width="120px">
+                </div>-->
+
+
+
+                <nav class="fill">
+                    <ul>
+                          <li><a href="support.html"><i class="fa fa-eye"></i>&nbsp;FAQ/SUPPORT</a></li>
+                  
+                      <li><a href="#"><i class="fa fa-user-plus"></i>&nbsp;SIGN-UP</a></li>
+                        <li><a href="login.html">&nbsp;SIGN-IN</a></li>
+                     
+                    </ul>
+                  </nav>
+                </section>
+                <section style="background: #34495e; color: rgba(255, 255, 255, 0.5);">
+            </div><br>
+
+    </header>
+<h1>Please confirm your details</h1>
+<div class="box"><br>
+
+<div class="profile_image">
+	<h1>Profile Image</h1>
+</div><br>
+<script LANGUAGE="JavaScript">
+function getParams(){
+var idx = document.URL.indexOf('?');
+var params = new Array();
+if (idx != -1) {
+var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+for (var i=0; i<pairs.length; i++){
+nameVal = pairs[i].split('=');
+params[nameVal[0]] = nameVal[1];
+}
+}
+return params;
+}
+params = getParams();
+
+firstname = unescape(params["firstname"]);
+lastname = unescape(params["lastname"]);
+email= unescape(params["email"]);
+phno=unescape(params["phno"]);
+address=unescape(params["address"]);
+state=unescape(params["state"]);
+city=unescape(params["city"]);
+zipcode=unescape(params["zipcode"]);
+day=unescape(params["day"]);
+month=unescape(params["month"]);
+year=unescape(params["year"]);
+gender=unescape(params["gender"]);
+age = unescape(params["age"]);
+height=unescape(params["height"]);
+weight=unescape(params["weight"]);
+bmi= unescape(params["bmi"]);
+meaning=unescape(params["meaning"]);
+blood_group=unescape(params["blood_group"]);
+injuries=unescape(params["injuries"]);
+allergies=unescape(params["allergies"]);
+
+
+
+
+var firstname = firstname.replace(/[+]/g," ");
+var lastname=lastname.replace(/[+]/g," ");
+document.write('<p id="jstext1"> Welcome  ' + firstname+  lastname+'</p> </br>')
+
+var email=email;
+document.write('<p id="jstext"> Email:- ' +email+'</p> </br>')
+
+var phno=phno.replace(/[+]/g," ");
+document.write('<p id="jstext">Phno:- ' +phno+'</p> </br>')
+
+var address=address.replace("+"," ").replace(/[+]/g," ");
+document.write('<p id="jstext"> Address:- ' +address+'</p> </br>')
+
+var state=state.replace(/[+]/g," ");
+document.write('<p id="jstext"> State/Union Territory:-' +state+'</p> </br>')
+
+var city=city.replace(/[+]/g," ");
+document.write('<p id="jstext">  city:-' +city+'</p> </br>')
+
+var zipcode=zipcode.replace(/[+]/g," ");
+document.write('<p id="jstext"> Zipcode:-' +zipcode+'</p> </br>')
+
+var day=day.replace(/[+]/g," ");
+var month=month.replace(/[+]/g," ");
+var year=year.replace(/[+]/g," ");
+document.write('<p id="jstext"> Birth Date:- ' +day+ "/" +month+ "/" +year+ '</p> </br>')
+
+var gender=gender.replace(/[+]/g," ");
+document.write('<p id="jstext"> Gender:- ' +gender+'</p> </br>')
+
+var age=age.replace(/[+]/g," ");
+document.write('<p id="jstext"> Age:-  ' +age+'</p> </br>')
+
+var weight=weight.replace(/[+]/g," ");
+document.write('<p id="jstext"> Weight:-  ' +weight+ ' Kg </p> </br>')
+
+
+var height=height.replace(/[+]/g," ");
+document.write('<p id="jstext"> Height:-  ' +height+' cms </p> </br>')
+
+var bmi=bmi.replace(/[+]/g," ");
+var meaning=meaning.replace(/[+]/g," ");
+document.write('<p id="jstext"> Bmi is ' +bmi+ ' and you are ' +meaning+' </p> </br>')
+
+var blood_group=blood_group;
+document.write('<p id="jstext"> Blood Group:- ' +blood_group+'</p> </br>')
+
+var injuries=injuries.replace(/[+]/g," ");
+document.write('<p id="jstext"> Injuries:- ' +injuries+'</p> </br>')
+
+var allergies=allergies.replace(/[+]/g," ");
+document.write('<p id="jstext"> Allergies:-  ' +allergies+'</p> </br>')
+
+</script>
+</div><br>
+	<input type="checkbox" name="Agree" required="required">
+				<span><a href="#">I agree that all my details mention above  are correct</a></span>
+				<br><br>
+
+	<br>
+	<button class="submit">
+		<a href="Patient_ID_Generation.html">Submit</a>
+		</button>
+
+
+		<button class="return">
+			<a href="Patient_Registration.html">Return</a>
+		</button>
+		<br><br>
+
+</body>
+</html>
